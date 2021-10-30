@@ -3,9 +3,8 @@ import click
 
 import xlsxwriter
 
-KIDO_PAPER_SIZE = 9  # A4
+PAPER_SIZE = 9  # A4
 TOTAL_HEIGHT = 480
-KIDO_ROW_SIZE = 44  # optimal for 10 row A4
 BORDER_STYLE_DOUBLE = 6
 BORDER_STYLE_SINGLE = 7
 FONT_SIZE_HINT = 7
@@ -39,7 +38,7 @@ def math_square_ruled(
     height = TOTAL_HEIGHT / (1 + (max_rows - min_rows / step_rows))
 
     worksheet = workbook.add_worksheet()
-    worksheet.set_paper(KIDO_PAPER_SIZE)
+    worksheet.set_paper(PAPER_SIZE)
 
     worksheet.set_default_row(height)
     worksheet.set_landscape()
